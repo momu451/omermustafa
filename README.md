@@ -12,4 +12,7 @@ Update the domain in `robots.txt` and `sitemap.xml` to your GitHub Pages URL or 
 - Example: `https://YOUR_USERNAME.github.io/omer-mustafa/`
 
 ## Privacy
-Phone and address are intentionally omitted. Contact is via LinkedIn only.
+Phone and address are intentionally omitted. Contact is via the form only.
+
+## Contact form
+This site uses Formspree to gate CV access. Update the endpoint in `index.html` if needed.
