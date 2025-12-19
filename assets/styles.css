@@ -189,6 +189,31 @@ textarea:focus-visible {
   border: 1px solid var(--stroke);
 }
 
+.preview-block {
+  margin-bottom: 18px;
+}
+
+.preview-card {
+  display: grid;
+  gap: 16px;
+  align-items: center;
+  background: rgba(18, 22, 34, 0.85);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.preview-card img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--stroke);
+}
+
+.preview-list {
+  margin: 10px 0 0 18px;
+  color: var(--muted);
+}
+
 .muted {
   color: var(--muted);
 }
@@ -341,6 +366,10 @@ textarea {
 
   .media-card {
     grid-template-columns: 1fr 1.2fr;
+  }
+
+  .preview-card {
+    grid-template-columns: 1fr 1.4fr;
   }
 }
 
