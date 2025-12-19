@@ -193,25 +193,63 @@ textarea:focus-visible {
   margin-bottom: 18px;
 }
 
-.preview-card {
-  display: grid;
-  gap: 16px;
-  align-items: center;
-  background: rgba(18, 22, 34, 0.85);
-  border: 1px solid var(--stroke);
-  border-radius: 16px;
-  padding: 18px;
+.preview-header {
+  margin-bottom: 12px;
 }
 
-.preview-card img {
+.carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(220px, 1fr);
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+  background: rgba(18, 22, 34, 0.85);
+  scroll-snap-align: start;
+  min-height: 140px;
+}
+
+.carousel-item h4 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+}
+
+.carousel-item p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(212, 177, 92, 0.3), rgba(102, 215, 209, 0.3));
+  border: 1px solid var(--stroke);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cv-thumb {
   width: 100%;
+  height: 120px;
   border-radius: 12px;
   border: 1px solid var(--stroke);
-}
-
-.preview-list {
-  margin: 10px 0 0 18px;
-  color: var(--muted);
+  background: linear-gradient(135deg, rgba(212, 177, 92, 0.18), rgba(102, 215, 209, 0.18));
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  margin-bottom: 14px;
 }
 
 .muted {
@@ -367,9 +405,8 @@ textarea {
   .media-card {
     grid-template-columns: 1fr 1.2fr;
   }
-
-  .preview-card {
-    grid-template-columns: 1fr 1.4fr;
+  .carousel {
+    grid-auto-columns: minmax(260px, 1fr);
   }
 }
 

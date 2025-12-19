@@ -30,6 +30,9 @@
       if (nameField) {
         nameField.focus();
       }
+      if (gate) {
+        gate.classList.add('hidden');
+      }
     });
   }
 
