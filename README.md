@@ -16,3 +16,6 @@ Phone and address are intentionally omitted. Contact is via the form only.
 
 ## Contact form
 This site uses Formspree to gate CV access. Update the endpoint in `index.html` if needed.
+
+## Media credits
+Images are sourced from Unsplash. Icons are from Tabler Icons (MIT).

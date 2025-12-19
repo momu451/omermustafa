@@ -1,40 +1,61 @@
 (() => {
   const body = document.body;
-  const gate = document.querySelector('.gate');
-  const gateButton = document.getElementById('gate-open');
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
   const gatedBlocks = document.querySelectorAll('.gated-items');
+  const modal = document.getElementById('gate-modal');
+  const modalClose = modal ? modal.querySelector('.modal-close') : null;
+  const modalBackdrop = modal ? modal.querySelector('.modal-backdrop') : null;
+  const gateTriggers = document.querySelectorAll('.gate-trigger');
 
   const unlock = () => {
     body.classList.remove('locked');
     gatedBlocks.forEach((section) => section.setAttribute('aria-hidden', 'false'));
-    if (gate) {
-      gate.setAttribute('aria-hidden', 'true');
-      gate.classList.add('hidden');
-    }
     sessionStorage.setItem('access_unlocked', '1');
+  };
+
+  const openModal = () => {
+    if (!modal) {
+      return;
+    }
+    modal.setAttribute('aria-hidden', 'false');
+    modal.querySelector('input, textarea, button')?.focus();
+  };
+
+  const closeModal = () => {
+    if (!modal) {
+      return;
+    }
+    modal.setAttribute('aria-hidden', 'true');
   };
 
   if (sessionStorage.getItem('access_unlocked') === '1') {
     unlock();
   }
 
-  if (gateButton) {
-    gateButton.addEventListener('click', () => {
-      const contact = document.getElementById('contact');
-      if (contact) {
-        contact.scrollIntoView({ behavior: 'smooth' });
+  gateTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      if (!body.classList.contains('locked')) {
+        return;
       }
-      const nameField = document.getElementById('name');
-      if (nameField) {
-        nameField.focus();
-      }
-      if (gate) {
-        gate.classList.add('hidden');
-      }
+      event.preventDefault();
+      openModal();
     });
+  });
+
+  if (modalClose) {
+    modalClose.addEventListener('click', closeModal);
   }
+
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener('click', closeModal);
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  });
 
   if (!form) {
     return;
@@ -42,7 +63,9 @@
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    status.textContent = 'Submitting...';
+    if (status) {
+      status.textContent = 'Submitting...';
+    }
     const formData = new FormData(form);
     try {
       const response = await fetch(form.action, {
@@ -54,20 +77,27 @@
       });
 
       if (response.ok) {
-        status.textContent = 'Access granted. Full profile unlocked.';
+        if (status) {
+          status.textContent = 'Access granted. You can now open gated assets.';
+        }
         form.reset();
         unlock();
+        closeModal();
         return;
       }
 
       const data = await response.json();
-      if (data && data.errors) {
-        status.textContent = data.errors.map((error) => error.message).join(' ');
-      } else {
-        status.textContent = 'Submission failed. Try again later.';
+      if (status) {
+        if (data && data.errors) {
+          status.textContent = data.errors.map((error) => error.message).join(' ');
+        } else {
+          status.textContent = 'Submission failed. Try again later.';
+        }
       }
     } catch (err) {
-      status.textContent = 'Submission failed. Check your connection and try again.';
+      if (status) {
+        status.textContent = 'Submission failed. Check your connection and try again.';
+      }
     }
   });
 })();
