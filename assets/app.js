@@ -7,6 +7,8 @@
   const modalClose = modal ? modal.querySelector('.modal-close') : null;
   const modalBackdrop = modal ? modal.querySelector('.modal-backdrop') : null;
   const gateTriggers = document.querySelectorAll('.gate-trigger');
+  const detailsBlocks = document.querySelectorAll('details');
+  const desktopQuery = window.matchMedia('(min-width: 900px)');
 
   const unlock = () => {
     body.classList.remove('locked');
@@ -33,9 +35,38 @@
     unlock();
   }
 
+  const syncDetails = () => {
+    detailsBlocks.forEach((detail) => {
+      detail.open = desktopQuery.matches;
+    });
+  };
+
+  syncDetails();
+  if (desktopQuery.addEventListener) {
+    desktopQuery.addEventListener('change', syncDetails);
+  } else if (desktopQuery.addListener) {
+    desktopQuery.addListener(syncDetails);
+  }
+
+  const scrollToAssets = () => {
+    const assets = document.getElementById('gated-assets');
+    if (assets) {
+      assets.scrollIntoView({ behavior: 'smooth' });
+      const cvLink = document.getElementById('cv-link');
+      if (cvLink) {
+        cvLink.focus();
+      }
+    }
+  };
+
   gateTriggers.forEach((trigger) => {
     trigger.addEventListener('click', (event) => {
       if (!body.classList.contains('locked')) {
+        const gateType = trigger.getAttribute('data-gate');
+        if (gateType === 'cv' || gateType === 'case') {
+          event.preventDefault();
+          scrollToAssets();
+        }
         return;
       }
       event.preventDefault();

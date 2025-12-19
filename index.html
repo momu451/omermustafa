@@ -64,6 +64,10 @@
       <h1>Omer Mustafa</h1>
       <p class="headline">Disciplined and diplomatic. I weaponize vendor control and risk analytics to protect revenue and remove exposure.</p>
       <p class="subhead">Twenty-plus years across banking, financial services, technology, and retail. I treat vendors as controllable risk surfaces and enforce measurable outcomes without slowing the business.</p>
+      <div class="cta-row">
+        <button class="btn gate-trigger" type="button" data-gate="cv">Request CV + case pack</button>
+        <span class="cta-note">Lead capture is frictionless. No personal email displayed.</span>
+      </div>
       <div class="tag-row">
         <span>UK</span>
         <span>EU</span>
@@ -76,7 +80,7 @@
   </header>
 
   <main id="content" class="layout">
-    <section class="section carousel-section">
+    <section class="section carousel-section fold-left">
       <div class="section-head">
         <h2>Case study previews</h2>
         <p>Tap a thumbnail to request the full pack.</p>
@@ -120,7 +124,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section fold-left">
       <div class="grid two">
         <div class="card">
           <h3>USP</h3>
@@ -140,7 +144,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section fold-right">
       <h2>Profile snapshot</h2>
       <div class="accordion-grid">
         <details>
@@ -197,20 +201,20 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section fold-right" id="gated-assets">
       <h2>Gated assets</h2>
       <div class="grid two gated-items" aria-hidden="true">
         <div class="card gated-item">
           <img class="cv-thumb" src="assets/img/cv-thumb.jpg" alt="Preview cover for IRM CV" loading="lazy">
           <h3>Full IRM CV</h3>
           <p>Detailed project history, outcomes, and scope.</p>
-          <a class="btn gated-link gate-trigger" href="assets/omer-mustafa-irm-cv.pdf" data-gate="cv" download>Download CV (PDF)</a>
+          <a class="btn gated-link gate-trigger" id="cv-link" href="assets/omer-mustafa-irm-cv.pdf" data-gate="cv" download>Download CV (PDF)</a>
         </div>
         <div class="card gated-item">
           <img class="cv-thumb" src="assets/img/case-03.jpg" alt="Preview of case study pack" loading="lazy">
           <h3>Case study pack</h3>
           <p>Vendor control, integration risk, consent remediation, and consolidation playbooks.</p>
-          <div class="locked-note">Unlock via the case study carousel.</div>
+          <button class="btn gate-trigger" type="button" data-gate="case">Request access</button>
         </div>
       </div>
     </section>

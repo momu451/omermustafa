@@ -95,6 +95,19 @@ summary:focus-visible {
   max-width: 720px;
 }
 
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  align-items: center;
+  margin: 12px 0 6px;
+}
+
+.cta-note {
+  font-size: 12px;
+  color: var(--muted);
+}
+
 .tag-row {
   display: flex;
   flex-wrap: wrap;
@@ -113,11 +126,12 @@ summary:focus-visible {
 
 .layout {
   display: grid;
-  gap: 6px;
+  gap: 8px;
+  padding: 0 8vw 24px;
 }
 
 .section {
-  padding: 20px 8vw;
+  padding: 12px 0;
 }
 
 .section-head {
@@ -178,7 +192,7 @@ summary:focus-visible {
 
 .carousel-item {
   display: grid;
-  grid-template-columns: 64px 1fr;
+  grid-template-columns: 52px 1fr;
   gap: 12px;
   align-items: center;
   padding: 12px;
@@ -192,8 +206,8 @@ summary:focus-visible {
 }
 
 .carousel-item img {
-  width: 64px;
-  height: 64px;
+  width: 52px;
+  height: 52px;
   border-radius: 10px;
   object-fit: cover;
   border: 1px solid var(--stroke);
@@ -433,6 +447,23 @@ textarea {
   .carousel {
     grid-auto-columns: minmax(240px, 1fr);
   }
+
+  .layout {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: start;
+  }
+
+  .fold-left {
+    grid-column: 1;
+  }
+
+  .fold-right {
+    grid-column: 2;
+  }
+
+  details summary {
+    pointer-events: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -441,16 +472,20 @@ textarea {
   }
 
   .section {
-    padding: 16px 6vw;
+    padding: 14px 0;
+  }
+
+  .layout {
+    padding: 0 6vw 20px;
   }
 
   .carousel-item {
-    grid-template-columns: 56px 1fr;
+    grid-template-columns: 52px 1fr;
   }
 
   .carousel-item img {
-    width: 56px;
-    height: 56px;
+    width: 52px;
+    height: 52px;
   }
 }
 
