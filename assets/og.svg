@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1117"/>
+      <stop offset="100%" stop-color="#1d263b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4b15c"/>
+      <stop offset="100%" stop-color="#66d7d1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="160" cy="120" r="180" fill="#d4b15c" opacity="0.18"/>
+  <circle cx="1040" cy="520" r="220" fill="#66d7d1" opacity="0.18"/>
+  <text x="80" y="260" fill="#e7e9f1" font-size="54" font-family="Georgia, serif">Omer Mustafa</text>
+  <text x="80" y="330" fill="url(#accent)" font-size="28" font-family="Arial, sans-serif">Risk, vendor governance, digital operations</text>
+  <text x="80" y="390" fill="#9aa2b2" font-size="22" font-family="Arial, sans-serif">Cut cost. Tighten controls. Stabilize complex stacks.</text>
+</svg>

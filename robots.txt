@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://momu451.github.io/omer-mustafa/sitemap.xml
