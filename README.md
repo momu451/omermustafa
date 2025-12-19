@@ -15,7 +15,7 @@ Update the domain in `robots.txt` and `sitemap.xml` to your GitHub Pages URL or 
 Phone and address are intentionally omitted. Contact is via the form only.
 
 ## Contact form
-This site uses Formspree to gate CV access. Update the endpoint in `index.html` if needed.
+This site uses Formspree for contact requests. Update the endpoint in `index.html` if needed.
 
 ## Media credits
 Images are sourced from Unsplash. Icons are from Tabler Icons (MIT).
