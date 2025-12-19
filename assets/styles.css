@@ -126,11 +126,8 @@ summary:focus-visible {
 
 .layout {
   display: grid;
-  gap: 18px;
-  padding: 0 8vw 24px;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+  gap: 24px;
+  margin-top: 8px;
 }
 
 .column {
@@ -141,6 +138,14 @@ summary:focus-visible {
 
 .column-left {
   overflow: hidden;
+  padding-right: 0;
+}
+
+.shell {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8vw;
 }
 
 .section {
@@ -192,6 +197,10 @@ summary:focus-visible {
   color: var(--muted);
 }
 
+.carousel-clip {
+  overflow: hidden;
+}
+
 .carousel {
   display: grid;
   grid-auto-flow: column;
@@ -201,8 +210,9 @@ summary:focus-visible {
   overflow-y: hidden;
   width: 100%;
   max-width: 100%;
-  padding-bottom: 8px;
+  padding: 0 24px 8px 0;
   scroll-snap-type: x mandatory;
+  clip-path: inset(0);
 }
 
 .carousel-item {
@@ -482,8 +492,8 @@ textarea {
     padding: 14px 0;
   }
 
-  .layout {
-    padding: 0 6vw 20px;
+  .shell {
+    padding: 0 6vw;
   }
 
   .carousel-item {
