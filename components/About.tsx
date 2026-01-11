@@ -16,9 +16,7 @@ const About: React.FC = () => {
         <div className="max-w-5xl mx-auto">
           {/* Positioning Section */}
           <div className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">Positioning</h2>
-              <div className="w-20 h-1 bg-primary-600 mx-auto rounded"></div>
+            
             </div>
 
             <motion.div 
