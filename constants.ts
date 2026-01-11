@@ -184,41 +184,31 @@ export const PROJECTS_DATA: ProjectItem[] = [
     title: "Outsourced Platform Migration",
     context: "Strategic Transformation (Lantern)",
     description: "Developed and secured board approval for migration framed around risk reduction. Modelled c. 4.5x ROI, multi-year profit uplift and c. 3 FTE efficiency gains.",
-    technologies: ["ROI Modelling", "RFP Design", "Risk Assessment"],
-    link: "assets/platform-migration-case-study.pdf",
-    linkText: "PDF"
+    technologies: ["ROI Modelling", "RFP Design", "Risk Assessment"]
   },
   {
     title: "Supplier Spend & SLA Remediation",
     context: "Commercial Optimization (Plus X)",
     description: "Quantified £44k of misaligned supplier spend. Reset commercials, SLAs and escalation paths, reducing financial leakage and operational exposure.",
-    technologies: ["SLA Review", "Cost Control", "Data Remediation"],
-    link: "assets/supplier-spend-remediation.pdf",
-    linkText: "PDF"
+    technologies: ["SLA Review", "Cost Control", "Data Remediation"]
   },
   {
     title: "Supplier Landscape Rationalisation",
     context: "Cost Reduction (Cirium)",
     description: "Rationalised supplier landscape, consolidating vendors to deliver approximately £125k annual run-rate savings while improving control and auditability.",
-    technologies: ["Vendor Consolidation", "Contract Negotiation", "Auditability"],
-    link: "assets/supplier-rationalisation.pdf",
-    linkText: "PDF"
+    technologies: ["Vendor Consolidation", "Contract Negotiation", "Auditability"]
   },
   {
     title: "Regulated Supplier Change Oversight",
     context: "Regulatory Compliance (Sky Betting)",
     description: "Assessed supplier and control impacts of CRM tooling changes, ensuring alignment with regulatory and safer gambling obligations.",
-    technologies: ["Regulatory Compliance", "Operational Risk", "JIRA"],
-    link: "assets/regulated-change-oversight.pdf",
-    linkText: "PDF"
+    technologies: ["Regulatory Compliance", "Operational Risk", "JIRA"]
   },
   {
     title: "MarTech & CRM Cost Reduction",
     context: "Operational Efficiency (HSBC)",
     description: "Reduced run-rate costs by approximately 40% and managed £2m annual spend. Delivered verified savings through competitive RFPs and renegotiation.",
-    technologies: ["RFP Management", "Cost Reduction", "MarTech"],
-    link: "assets/martech-cost-reduction.pdf",
-    linkText: "PDF"
+    technologies: ["RFP Management", "Cost Reduction", "MarTech"]
   }
 ];
 
