@@ -14,12 +14,10 @@ const About: React.FC = () => {
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          {/* Positioning Section */}
-          <div className="mb-16">
-            
-            </div>
 
-            <motion.div 
+          {/* Summary card (Positioning heading removed) */}
+          <div className="mb-16">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -37,7 +35,7 @@ const About: React.FC = () => {
           {/* Service Areas */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {SERVICE_AREAS.map((area, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -49,9 +47,11 @@ const About: React.FC = () => {
                   <div className="p-2 bg-primary-50 rounded-lg">
                     {icons[index]}
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 uppercase tracking-tight">{area.title}</h3>
+                  <h3 className="text-lg font-bold text-slate-900 uppercase tracking-tight">
+                    {area.title}
+                  </h3>
                 </div>
-                
+
                 <ul className="space-y-3 flex-grow">
                   {area.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-slate-600 leading-relaxed">
@@ -63,6 +63,7 @@ const About: React.FC = () => {
               </motion.div>
             ))}
           </div>
+
         </div>
       </div>
     </section>
