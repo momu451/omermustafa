@@ -39,13 +39,17 @@ const Contact: React.FC = () => {
           </div>
           
           <div className="flex justify-center">
-             <button 
-               onClick={handleDownloadCV}
-               className="flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition-all transform hover:scale-105"
-             >
-                <Download className="w-5 h-5" />
-                Download CV
-             </button>
+             <a
+  href={`${import.meta.env.BASE_URL}assets/Omer-Mustafa-TPVRM.pdf`}
+  download="Omer-Mustafa-TPVRM.pdf"
+  target="_blank"
+  rel="noreferrer"
+  className="your-existing-button-classes-here"
+  onClick={() => trackEvent('download_cv', 'Engagement', 'Hero Section')}
+>
+  Download CV (PDF)
+</a>
+
           </div>
         </div>
       </div>
