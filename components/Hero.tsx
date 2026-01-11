@@ -52,13 +52,17 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-              <button 
-                onClick={handleDownloadCV}
-                className="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors duration-200 flex items-center gap-2"
-              >
-                <FileText className="w-4 h-4" />
-                Download CV (PDF)
-              </button>
+             <a
+  href={`${import.meta.env.BASE_URL}assets/Omer-Mustafa-TPVRM.pdf`}
+  download="Omer-Mustafa-TPVRM.pdf"
+  target="_blank"
+  rel="noreferrer"
+  className="your-existing-button-classes-here"
+  onClick={() => trackEvent('download_cv', 'Engagement', 'Hero Section')}
+>
+  Download CV (PDF)
+</a>
+
               <a 
                 href="#contact"
                 onClick={handleContactClick}
