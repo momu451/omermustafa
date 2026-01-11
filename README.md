@@ -1,21 +1,20 @@
-# Omer Mustafa - Personal Site
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Single-page personal and professional site optimized for SEO and AI/LLM search. Upload the folder to a GitHub repo and enable GitHub Pages.
+# Run and deploy your AI Studio app
 
-## Quick start
-1. Create a new GitHub repo and push this folder.
-2. In GitHub, go to Settings > Pages.
-3. Choose `main` branch and root folder, then save.
+This contains everything you need to run your app locally.
 
-## Optional (recommended)
-Update the domain in `robots.txt` and `sitemap.xml` to your GitHub Pages URL or custom domain.
-- Example: `https://YOUR_USERNAME.github.io/omer-mustafa/`
+View your app in AI Studio: https://ai.studio/apps/drive/1Yjcx3v85bXrbHurL5u-JS7MBOL2m5AZY
 
-## Privacy
-Phone and address are intentionally omitted. Contact is via the form only.
+## Run Locally
 
-## Contact form
-This site uses Formspree for contact requests. Update the endpoint in `index.html` if needed.
+**Prerequisites:**  Node.js
 
-## Media credits
-Images are sourced from Unsplash.
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
